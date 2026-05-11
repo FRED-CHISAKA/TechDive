@@ -1,0 +1,239 @@
+/* ===========================
+   TECHDIVE FOOTER UPGRADE
+=========================== */
+
+.tech-footer {
+    background: #171539;
+    color: #a2bcf8;
+    position: relative;
+}
+
+/* Left Brand Box */
+.tech-footer-brand {
+    background: #00ccffc8;
+    color: #ffffff !important;
+    /* border-radius: 12px; */
+    /* box-shadow: 0 4px 4px rgba(44, 68, 251, 0.812); */
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.tech-footer .footer-about h1 {
+    font-weight: 600;
+}
+
+/* Section Titles */
+.tech-footer .section-title h3 {
+    color: #ffffff !important;
+}
+
+/* Icons */
+.tech-footer i.text-primary {
+    color: #00ccff !important;
+}
+/* .tech-footer i:hover {
+    transition: none;
+    color: #fff !important;
+} */
+
+/* ================================
+   FOOTER LINK
+================================ */
+
+.tech-footer a {
+    position: relative;
+    text-decoration: none !important;
+    transition: color 0.3s ease;
+}
+
+.tech-footer a:hover {
+    text-decoration: none !important;
+}
+
+/* Animated underline */
+.tech-footer .col-lg-8 a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0;
+    height: 2px;
+    background: #00ccff;
+    transition: width 0.3s ease;
+}
+
+/* Animated underline */
+.tech-footer .footer-about a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    width: 0;
+    height: 3px;
+    background: #2f2b7f;
+    transition: width 0.3s ease;
+}
+
+.tech-footer .footer-about a:hover h1{
+    color: #2f2b7f !important;
+}
+
+.tech-footer .footer-about a:hover h1 span{
+    color: #ffffff !important;
+}
+
+/* Hover effect */
+.tech-footer .col-lg-8 a:hover {
+    color: #00ccff !important;
+}
+
+.tech-footer a:hover::after {
+    width: 40%;
+}
+
+/* Newsletter */
+.tech-footer .form-control {
+    background: rgb(255, 255, 255);
+    border: 1px solid rgba(10, 3, 46, 0.3);
+    color: #6c757d;
+    border-radius: 2px !important;
+}
+
+.tech-footer .form-control::placeholder {
+    color: #6c757d;
+}
+
+.tech-footer .btn-dark {
+    background: linear-gradient(135deg,#171539, #0055ff) !important;
+    /* background: #171539; */
+    border: none;
+    color: #ffffff;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.tech-footer .btn-dark:hover {
+    background: linear-gradient(135deg,#0055ff, #171539) !important;
+    /* background: #171539; */
+    color: #00ccff;
+}
+
+/* Social Buttons */
+.tech-footer .btn-square {
+    /* background: rgba(255, 255, 255, 0.1) !important; */
+    background: linear-gradient(135deg,#171539, #0055ff) !important;
+    border: 1px solid rgba(0, 207, 255, 0.4);
+    border-radius: 50%;
+    color: #ffffff;
+}
+
+.tech-footer .btn-square:hover {
+    background: linear-gradient(135deg,#0055ff, #171539) !important;
+    color: #ffffff !important;
+}
+
+/* ================================
+   BOTTOM BAR
+================================ */
+
+.tech-footer-bottom {
+    background:#01324f;
+    color: #aaa;
+    padding: 15px 0;
+    border-top: none !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.tech-footer-bottom .row {
+    justify-content: center !important;
+}
+
+.tech-footer-bottom .col-lg-8,
+.tech-footer-bottom .col-md-6 {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.tech-footer-bottom hr {
+    display: none;
+}
+
+.tech-footer-bottom a {
+    position: relative;
+    text-decoration: none !important;
+    border-bottom: none !important;
+    transition: color 0.3s ease;
+}
+
+.tech-footer-bottom a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 0;
+    height: 2px;
+    background: #00ccff;
+    transition: width 0.3s ease;
+}
+
+.tech-footer-bottom a:hover {
+    color: #00ccff !important;
+}
+
+.tech-footer-bottom a:hover::after {
+    width: 100%;
+}
+
+.tech-footer-bottom .d-flex {
+    flex-direction: row;
+    justify-content: center !important;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .tech-footer-bottom .d-flex p {
+        display: flex;
+        flex-direction: column;
+        line-height: 1.4;
+        align-items: center;
+        text-align: center;
+    }
+
+    .tech-footer-bottom .d-flex p a {
+        margin-top: 5px;
+    }
+}
+
+@media (max-width: 576px) {
+    .tech-footer-bottom .d-flex p a {
+        display: block;
+        margin-top: 5px;
+    }
+}
+/* ================================
+   TECHDIVE BACK TO TOP
+================================ */
+
+.back-to-top {
+    background: #00ccffc8 !important;
+    position: fixed !important;
+    right: 10px;
+    bottom: 23px;
+    z-index: 9999;
+    display: none; 
+    transition: all 0.3s ease;
+}
+
+.back-to-top:hover {
+    transform: translateY(-5px);
+    color: #ffffff !important;
+}
