@@ -116,8 +116,8 @@
                 <!-- Right Section -->
                 <div class="nav-right d-flex align-items-center">
 
-                    <!-- Search -->                    
-                    <a href="#" class="search-btn me-3">
+                    <!-- Search Button -->
+                    <a href="#" class="search-btn me-3" id="openSearch">
                         <i class="fas fa-search"></i>
                     </a>
 
@@ -128,6 +128,42 @@
             </div>
         </div>
     </header>
+
+
+
+    <!-- SEARCH OVERLAY -->
+    <div class="search-overlay" id="searchOverlay">
+
+        <!-- CLOSE BUTTON -->
+        <button class="close-search" id="closeSearch">
+            <i class="fas fa-times"></i>
+        </button>
+
+        <!-- SEARCH CONTENT -->
+        <div class="search-container">
+
+            <!-- SEARCH BOX -->
+            <div class="search-box">
+
+                <input 
+                    type="text"
+                    id="searchInput"
+                    placeholder="Search services, pages, projects..."
+                    autocomplete="off"
+                >
+
+                <button id="searchBtn">
+                    <i class="fas fa-search"></i>
+                </button>
+
+            </div>
+
+            <!-- SEARCH RESULTS -->
+            <div class="search-results" id="searchResults"></div>
+
+        </div>
+
+    </div>
 
     <!-- ================= HOME HERO SLIDER ================= -->
     <section class="tech-slider">
@@ -996,6 +1032,218 @@
 
 
     <!-- ================= CUSTOM JS ================= -->
+    <script>
+
+        // =========================================
+        // ELEMENTS
+        // =========================================
+
+        const openSearch = document.getElementById("openSearch");
+        const closeSearch = document.getElementById("closeSearch");
+
+        const searchOverlay = document.getElementById("searchOverlay");
+
+        const searchInput = document.getElementById("searchInput");
+
+        const searchResults = document.getElementById("searchResults");
+
+
+
+        // =========================================
+        // OPEN SEARCH
+        // =========================================
+
+        openSearch.addEventListener("click", function(e){
+
+            e.preventDefault();
+
+            searchOverlay.classList.add("active");
+
+            searchInput.focus();
+
+        });
+
+
+
+        // =========================================
+        // CLOSE SEARCH
+        // =========================================
+
+        closeSearch.addEventListener("click", function(){
+
+            searchOverlay.classList.remove("active");
+
+        });
+
+
+
+        // =========================================
+        // ESC CLOSE
+        // =========================================
+
+        document.addEventListener("keydown", function(e){
+
+            if(e.key === "Escape"){
+
+                searchOverlay.classList.remove("active");
+
+            }
+
+        });
+
+
+
+        // =========================================
+        // SEARCHABLE SECTIONS
+        // =========================================
+
+        const searchableSections = [
+
+            {
+                title: "Home",
+                url: "index.html",
+                content: document.body.innerText
+            },
+
+            {
+                title: "About",
+                url: "about.html",
+                content: "team mission vision why choose us techdive company"
+            },
+
+            {
+                title: "Services",
+                url: "services.html",
+                content: "web development cybersecurity cloud IoT systems"
+            },
+
+            {
+                title: "Projects",
+                url: "projects.html",
+                content: "portfolio systems applications websites"
+            },
+
+            {
+                title: "Insights Blog",
+                url: "blog.html",
+                content: "articles tutorials tech news AI cloud security"
+            },
+
+            {
+                title: "Contact",
+                url: "contact.html",
+                content: "contact support email phone address"
+            }
+
+        ];
+
+
+
+        // =========================================
+        // SEARCH FUNCTION
+        // =========================================
+
+        function performSearch(){
+
+            const query = searchInput.value
+                .toLowerCase()
+                .trim();
+
+            searchResults.innerHTML = "";
+
+
+
+            // EMPTY SEARCH
+            if(query === ""){
+
+                searchResults.innerHTML = "";
+
+                return;
+            }
+
+
+
+            // FILTER
+            const results = searchableSections.filter(section =>
+
+                section.title.toLowerCase().includes(query) ||
+
+                section.content.toLowerCase().includes(query)
+
+            );
+
+
+
+            // NO RESULTS
+            if(results.length === 0){
+
+                searchResults.innerHTML = `
+                    <div class="no-results">
+                        No matching content found.
+                    </div>
+                `;
+
+                return;
+            }
+
+
+
+            // SHOW RESULTS
+            results.forEach(result => {
+
+                // CREATE SMALL PREVIEW
+                let preview = result.content;
+
+                const index = preview
+                    .toLowerCase()
+                    .indexOf(query);
+
+                if(index !== -1){
+
+                    preview = preview.substring(index, index + 120);
+
+                }
+
+                searchResults.innerHTML += `
+
+                    <div class="result-item">
+
+                        <a href="${result.url}">
+
+                            <h4>${result.title}</h4>
+
+                            <p>...${preview}...</p>
+
+                        </a>
+
+                    </div>
+
+                `;
+
+            });
+
+        }
+
+
+
+        // =========================================
+        // LIVE SEARCH
+        // =========================================
+
+        searchInput.addEventListener("keyup", performSearch);
+
+
+
+        // =========================================
+        // BUTTON SEARCH
+        // =========================================
+
+        document.getElementById("searchBtn")
+            .addEventListener("click", performSearch);
+
+    </script>
+
+
     <script>
         window.addEventListener("scroll", function() {
 

@@ -38,6 +38,17 @@ body {
 
 /* Social Buttons */
 
+.top-right a.button-socials {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    margin: 0 3px;
+    border-radius: 50%;
+    text-decoration: none;
+}
+
 .top-right a{
     margin: 0 2px;
 }
@@ -45,6 +56,9 @@ body {
 .top-right .button-socials i{
     max-height: 18px;
     width: 10px;
+
+    font-size: 14px;
+    line-height: 1;
 }
 
 .top-right .button-socials {
@@ -53,11 +67,12 @@ body {
     background: linear-gradient(135deg, #0055ff, #171539);
     border: 1px solid rgba(0, 204, 255, 0.797);
     color: #ffffff;
+    transition: all 0.3s ease;
 }
 .top-right .button-socials:hover {
     background: linear-gradient(135deg, #171539, #0055ff) !important;
     color: #00ccff !important;
-    transform: translateY(-3px) !important;
+    transform: translateY(-3px) scale(1.05) !important;
 }
 
 /* =====================================================
@@ -239,6 +254,169 @@ body {
     color: #00ccff;
     border: 1px solid #00ccff;
 }
+
+/* =========================================
+   SEARCH OVERLAY
+========================================= */
+
+.search-overlay{
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 10, 35, 0.874);
+    backdrop-filter: blur(5px);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 120px;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.4s ease;
+    z-index: 99999;
+}
+
+/* Active */
+.search-overlay.active{
+    opacity: 1;
+    visibility: visible;
+}
+
+/* SEARCH CONTAINER */
+.search-container{
+    width: 75%;
+    max-width: 900px;
+}
+
+/* SEARCH BOX */
+.search-box{
+    display: flex;
+    width: 100%;
+}
+
+/* INPUT */
+.search-box input{
+    flex: 1;
+    height: 75px;
+    background: transparent;
+    border: 2px solid #00ccff;
+    color: #ffffff;
+    font-size: 22px;
+    padding: 0 25px;
+    outline: none;
+}
+
+.search-box input::placeholder{
+    color: rgba(255,255,255,0.6);
+}
+
+/* BUTTON */
+.search-box button{
+    width: 90px;
+    border: 2px solid #00ccff;
+    background: linear-gradient(135deg,#171539, #0055ff) !important;
+    color: #ffffff;
+    font-size: 24px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.search-box button:hover{
+    background: linear-gradient(135deg,#0055ff, #171539) !important;
+    border: 2px solid #00ccff;
+    color: #00ccff;
+}
+
+/* CLOSE BUTTON */
+.close-search{
+    position: absolute;
+    top: 25px;
+    right: 35px;
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 42px;
+    cursor: pointer;
+}
+
+/* SEARCH RESULTS */
+.search-results{
+    margin-top: 20px;
+
+    max-height: 500px;
+    overflow-y: auto;
+
+    background: rgba(255,255,255,0.03);
+    border-radius: 10px;
+}
+
+/* RESULT ITEM */
+.result-item{
+    padding: 18px 22px;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+
+    transition: 0.3s ease;
+}
+
+.result-item:hover{
+    background: rgba(255,255,255,0.05);
+}
+
+/* RESULT LINK */
+.result-item a{
+    color: white;
+    text-decoration: none;
+    display: block;
+}
+
+/* TITLE */
+.result-item h4{
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+/* DESCRIPTION */
+.result-item p{
+    font-size: 14px;
+    color: rgba(255,255,255,0.7);
+    margin: 0;
+}
+
+/* NO RESULT */
+.no-results{
+    color: rgba(255,255,255,0.7);
+    padding: 20px;
+    text-align: center;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+
+    .search-container{
+        width: 92%;
+    }
+
+    .search-box input{
+        height: 60px;
+        font-size: 17px;
+    }
+
+    .search-box button{
+        width: 70px;
+        font-size: 20px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
 .btn-tech-login {
     /* background: #171539; */
     background: linear-gradient(135deg, #171539);
@@ -2517,57 +2695,38 @@ body {
     transform: translateY(-6px) !important;
 }
 
-
-/* ==========================================
-   PROCESS SECTION
-========================================== */
-/* 
-.tech-projects-filter .isotope-filters{
-    display: flex !important;
-    list-style: none !important;
-    padding: 4px 4px !important;
-    margin: 6px !important;
-    justify-content: center !important;
-}
-
-.tech-projects-filter .isotope-filters li{
-    padding: 4px 4px !important;
-    margin: 6px !important;
-}
-
-.tech-projects-filter .img-fluid{
-    border-radius: 8px !important;
-    width: 100% !important;
-    height: 250px !important;
-}
- */
-
-
  /* ==========================================
    PROJECTS SECTION
 ========================================== */
 .portfolio .portfolio-filters {
-  padding: 0;
-  margin: 0 auto 20px auto;
-  list-style: none;
-  text-align: center;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
 }
 
 .portfolio .portfolio-filters li {
-  cursor: pointer;
-  display: inline-block;
-  padding: 0;
-  font-size: 18px;
-  font-weight: 500;
-  margin: 0 10px;
-  line-height: 1;
-  margin-bottom: 5px;
-  transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 500;
+    margin: 0 4px;
+    line-height: 1;
+    padding: 10px 16px;
+    border-radius: 40px;
+    background: #e2ecf3;
+    border: 1px solid transparent;
+    transition: all 0.3s ease-in-out;
 }
 
 .portfolio .portfolio-filters li:hover,
 .portfolio .portfolio-filters li.filter-active {
-  color: #00ccff !important;
+    background: #00ccff !important;
+    color: #ffffff !important;
+    border-color: #00ccff;
+    box-shadow: 0 4px 4px rgb(17, 0, 255);
 }
 
 .portfolio .portfolio-filters li:first-child {
@@ -2576,13 +2735,6 @@ body {
 
 .portfolio .portfolio-filters li:last-child {
   margin-right: 0;
-}
-
-@media (max-width: 575px) {
-  .portfolio .portfolio-filters li {
-    font-size: 14px;
-    margin: 0 5px;
-  }
 }
 
 .portfolio .portfolio-content {
@@ -2788,4 +2940,170 @@ body {
   font-family: var(--heading-font);
 }
 
+/* ==========================================
+   PORTFOLIO SECTION SPACING
+========================================== */
 
+.portfolio{
+    padding: 100px 0 !important;
+    position: relative;
+    background: #ffffff !important;
+}
+
+.portfolio .container{
+    position: relative;
+}
+
+/* SPACE BETWEEN FILTERS & ITEMS */
+
+.portfolio .isotope-layout{
+    margin-top: 20px;
+}
+
+.portfolio .isotope-container{
+    margin-top: 30px;
+}
+
+/* ==========================================
+   ISOTOPE TRANSITIONS
+========================================== */
+
+.isotope-container{
+    transition: height 0.4s ease;
+}
+
+.isotope-item{
+    transition:
+        transform 0.5s ease,
+        opacity 0.4s ease;
+}
+
+.portfolio .row{
+    row-gap: 25px !important;
+}
+
+/* ==========================================
+   MOBILE IMPROVEMENTS
+========================================== */
+
+@media (max-width: 768px){
+
+    .portfolio{
+        padding: 80px 0 !important;
+    }
+
+    .portfolio .portfolio-filters{
+        gap: 10px;
+    }
+
+    .portfolio .portfolio-filters li{
+
+        padding: 10px 18px;
+
+        font-size: 13px !important;
+    }
+
+    .portfolio .isotope-container{
+        margin-top: 20px;
+    }
+
+}
+
+
+/* ==========================================
+   PROJECT DETAILS SWIPER
+========================================== */
+
+.portfolio-details {
+    padding-top: 120px;
+    padding-bottom: 80px;
+    background: #ffffff;
+}
+
+.portfolio-details-slider {
+    position: relative;
+    overflow: hidden;
+}
+
+.portfolio-details-slider img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+}
+
+/* Pagination Bullets */
+.swiper-pagination {
+    margin-top: 20px;
+    position: relative;
+}
+
+.swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+    background: #b5b5b5;
+    opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+    background: #00ccff !important;
+}
+
+/* Info Card */
+.portfolio-info {
+    background: #eaf9ff;
+    padding: 30px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.05);
+}
+
+.portfolio-info h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #000;
+}
+
+.portfolio-info ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.portfolio-info ul li {
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(0,0,0,0.08);
+    font-size: 15px;
+}
+
+/* Description */
+.portfolio-description {
+    margin-top: 30px;
+}
+
+.portfolio-description h2 {
+    font-size: 24px;
+    margin-top: 25px;
+    margin-bottom: 15px;
+    color: #00aee0;
+}
+
+.portfolio-description p,
+.portfolio-description li {
+    color: #444;
+    line-height: 1.8;
+}
+
+.portfolio-description ul {
+    padding-left: 20px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+
+    .portfolio-details {
+        padding-top: 100px;
+    }
+
+    .portfolio-details-slider img {
+        height: 300px;
+    }
+
+}

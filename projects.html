@@ -482,6 +482,9 @@
     <!-- jQuery (Owl Carousel dependency) -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
+    <!-- ISOTOPE -->
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+
     <!-- Owl Carousel JS -->
     <script src="assets/lib/owlcarousel/owl.carousel.min.js"></script>
 
@@ -490,24 +493,6 @@
 
     <!-- JavaScript Libraries -->    
     <script src="assets/js/tech-header.js"></script>
-
-    <!-- ================= CUSTOM JS ================= -->
-    <script>
-        window.addEventListener("scroll", function() {
-
-            const header = document.querySelector(".tech-header");
-            const topbar = document.querySelector(".tech-topbar");
-
-            if (window.scrollY > 50) {
-                header.classList.add("shrink");
-                topbar.classList.add("hide");
-            } else {
-                header.classList.remove("shrink");
-                topbar.classList.remove("hide");
-            }
-
-        });
-    </script>
 
 </body>
 
