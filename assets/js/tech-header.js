@@ -1,6 +1,6 @@
-// =============================
+// ================================
 // TECHDIVE HEADER & INTERACTIONS
-// =============================
+// ================================
 
 document.addEventListener("DOMContentLoaded", function () {
 
@@ -9,9 +9,9 @@ document.addEventListener("DOMContentLoaded", function () {
     const navbarCollapse = document.querySelector("#navbarNav");
     const backToTop = document.querySelector(".back-to-top");
 
-    // =============================
+    // =================================
     // Shrink on Scroll & Back to Top
-    // =============================
+    // =================================
     function handleScroll() {
         if (header) {
             if (window.scrollY > 1) {
