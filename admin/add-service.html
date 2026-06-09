@@ -2,12 +2,12 @@
 <html lang="en">
 
 
-<!-- form-input-groups23:59-->
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
-    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
-    <title>TechDive - Medical & Hospital - Bootstrap 4 Admin Template</title>
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/icon.jpg" style="border-radius: 50% !important;">
+    <title>TechDive Admin Dashboard</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
@@ -22,7 +22,7 @@
         <div class="header">
 			<div class="header-left">
 				<a href="index.html" class="logo">
-					<img src="assets/img/logo.png" width="35" height="35" alt=""> <span>TechDive</span>
+					<img src="assets/img/icon.jpg" width="35" height="35" alt="" style="border-radius: 50% !important;"> <span>TechDive</span>
 				</a>
 			</div>
 			<a id="toggle_btn" href="javascript:void(0);"><i class="fa fa-bars"></i></a>
@@ -43,7 +43,7 @@
 												<img alt="John Doe" src="assets/img/user.jpg" class="img-fluid">
 											</span>
 											<div class="media-body">
-												<p class="noti-details"><span class="noti-title">John Doe</span> added new task <span class="noti-title">Patient appointment booking</span></p>
+												<p class="noti-details"><span class="noti-title">Contacts</span> Update <span class="noti-title">New contact form submitted</span></p>
 												<p class="noti-time"><span class="notification-time">4 mins ago</span></p>
 											</div>
                                         </div>
@@ -105,9 +105,11 @@
                 </li>
                 <li class="nav-item dropdown has-arrow">
                     <a href="#" class="dropdown-toggle nav-link user-link" data-toggle="dropdown">
-                        <span class="user-img"><img class="rounded-circle" src="assets/img/user.jpg" width="40" alt="Admin">
-							<span class="status online"></span></span>
-                        <span>Admin</span>
+                        <span class="user-img">
+							<img class="rounded-circle" src="assets/img/user.jpg" width="24" alt="Admin">
+							<span class="status online"></span>
+						</span>
+						<span>TechDive Admin</span>
                     </a>
 					<div class="dropdown-menu">
 						<a class="dropdown-item" href="profile.html">My Profile</a>
@@ -118,7 +120,7 @@
                 </li>
             </ul>
             <div class="dropdown mobile-user-menu float-right">
-                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-ellipsis-v"></i></a>
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-ellipsis-v"></i></a>
                 <div class="dropdown-menu dropdown-menu-right">
                     <a class="dropdown-item" href="profile.html">My Profile</a>
                     <a class="dropdown-item" href="edit-profile.html">Edit Profile</a>
@@ -132,159 +134,102 @@
                 <div id="sidebar-menu" class="sidebar-menu">
                     <ul>
                         <li class="menu-title">Main</li>
+
                         <li>
-                            <a href="index.html"><i class="fa fa-dashboard"></i> <span>Dashboard</span></a>
+                            <a href="index.html">
+                                <i class="fa fa-dashboard"></i>
+                                <span>Dashboard</span>
+                            </a>
                         </li>
-						<li>
-                            <a href="doctors.html"><i class="fa fa-user-md"></i> <span>Doctors</span></a>
-                        </li>
+
                         <li>
-                            <a href="patients.html"><i class="fa fa-wheelchair"></i> <span>Patients</span></a>
+                            <a href="projects.html">
+                                <i class="fa fa-code"></i>
+                                <span>Projects</span>
+                            </a>
                         </li>
+
+                        <li class="active">
+                            <a href="services.html">
+                                <i class="fa fa-cogs"></i>
+                                <span>Services</span>
+                            </a>
+                        </li>
+
                         <li>
-                            <a href="appointments.html"><i class="fa fa-calendar"></i> <span>Appointments</span></a>
+                            <a href="clients.html">
+                                <i class="fa fa-users"></i>
+                                <span>Clients</span>
+                            </a>
                         </li>
+
                         <li>
-                            <a href="schedule.html"><i class="fa fa-calendar-check-o"></i> <span>Doctor Schedule</span></a>
+                            <a href="team.html">
+                                <i class="fa fa-user-circle"></i>
+                                <span>Team</span>
+                            </a>
                         </li>
+
                         <li>
-                            <a href="departments.html"><i class="fa fa-hospital-o"></i> <span>Departments</span></a>
+                            <a href="messages.html">
+                                <i class="fa fa-comments"></i>
+                                <span>Messages</span>
+                            </a>
                         </li>
-						<li class="submenu">
-							<a href="#"><i class="fa fa-user"></i> <span> Employees </span> <span class="menu-arrow"></span></a>
-							<ul style="display: none;">
-								<li><a href="employees.html">Employees List</a></li>
-								<li><a href="leaves.html">Leaves</a></li>
-								<li><a href="holidays.html">Holidays</a></li>
-								<li><a href="attendance.html">Attendance</a></li>
-							</ul>
-						</li>
-						<li class="submenu">
-							<a href="#"><i class="fa fa-money"></i> <span> Accounts </span> <span class="menu-arrow"></span></a>
-							<ul style="display: none;">
-								<li><a href="invoices.html">Invoices</a></li>
-								<li><a href="payments.html">Payments</a></li>
-								<li><a href="expenses.html">Expenses</a></li>
-								<li><a href="taxes.html">Taxes</a></li>
-								<li><a href="provident-fund.html">Provident Fund</a></li>
-							</ul>
-						</li>
-						<li class="submenu">
-							<a href="#"><i class="fa fa-book"></i> <span> Payroll </span> <span class="menu-arrow"></span></a>
-							<ul style="display: none;">
-								<li><a href="salary.html"> Employee Salary </a></li>
-								<li><a href="salary-view.html"> Payslip </a></li>
-							</ul>
-						</li>
-                        <li>
-                            <a href="chat.html"><i class="fa fa-comments"></i> <span>Chat</span> <span class="badge badge-pill bg-primary float-right">5</span></a>
-                        </li>
+
                         <li class="submenu">
-                            <a href="#"><i class="fa fa-video-camera camera"></i> <span> Calls</span> <span class="menu-arrow"></span></a>
-                            <ul style="display: none;">
-                                <li><a href="voice-call.html">Voice Call</a></li>
-                                <li><a href="video-call.html">Video Call</a></li>
-                                <li><a href="incoming-call.html">Incoming Call</a></li>
+                            <a href="#">
+                                <i class="fa fa-lightbulb-o"></i>
+                                <span>Insights</span>
+                                <span class="menu-arrow"></span>
+                            </a>
+
+                            <ul style="display:none;">
+                                <li><a href="blog.html">All Posts</a></li>
+                                <li><a href="add-blog.html">Add Post</a></li>
+                                <li><a href="categories.html">Categories</a></li>
                             </ul>
                         </li>
+
                         <li class="submenu">
-                            <a href="#"><i class="fa fa-envelope"></i> <span> Email</span> <span class="menu-arrow"></span></a>
-                            <ul style="display: none;">
-                                <li><a href="compose.html">Compose Mail</a></li>
-                                <li><a href="inbox.html">Inbox</a></li>
-                                <li><a href="mail-view.html">Mail View</a></li>
+                            <a href="#">
+                                <i class="fa fa-briefcase"></i>
+                                <span>Portfolio</span>
+                                <span class="menu-arrow"></span>
+                            </a>
+
+                            <ul style="display:none;">
+                                <li><a href="portfolio.html">All Projects</a></li>
+                                <li><a href="add-project.html">Add Project</a></li>
                             </ul>
                         </li>
-                        <li class="submenu">
-                            <a href="#"><i class="fa fa-commenting-o"></i> <span> Blog</span> <span class="menu-arrow"></span></a>
-                            <ul style="display: none;">
-                                <li><a href="blog.html">Blog</a></li>
-                                <li><a href="blog-details.html">Blog View</a></li>
-                                <li><a href="add-blog.html">Add Blog</a></li>
-                                <li><a href="edit-blog.html">Edit Blog</a></li>
-                            </ul>
-                        </li>
-						<li>
-							<a href="assets.html"><i class="fa fa-cube"></i> <span>Assets</span></a>
-						</li>
-						<li>
-							<a href="activities.html"><i class="fa fa-bell-o"></i> <span>Activities</span></a>
-						</li>
-						<li class="submenu">
-							<a href="#"><i class="fa fa-flag-o"></i> <span> Reports </span> <span class="menu-arrow"></span></a>
-							<ul style="display: none;">
-								<li><a href="expense-reports.html"> Expense Report </a></li>
-								<li><a href="invoice-reports.html"> Invoice Report </a></li>
-							</ul>
-						</li>
+
                         <li>
-                            <a href="settings.html"><i class="fa fa-cog"></i> <span>Settings</span></a>
+                            <a href="analytics.html">
+                                <i class="fa fa-line-chart"></i>
+                                <span>Analytics</span>
+                            </a>
                         </li>
-                        <li class="menu-title">UI Elements</li>
-                        <li class="submenu">
-                            <a href="#"><i class="fa fa-laptop"></i> <span> Components</span> <span class="menu-arrow"></span></a>
-                            <ul style="display: none;">
-                                <li><a href="uikit.html">UI Kit</a></li>
-                                <li><a href="typography.html">Typography</a></li>
-                                <li><a href="tabs.html">Tabs</a></li>
-                            </ul>
-                        </li>
-                        <li class="submenu">
-                            <a href="#"><i class="fa fa-edit"></i> <span> Forms</span> <span class="menu-arrow"></span></a>
-                            <ul style="display: none;">
-                                <li><a href="form-basic-inputs.html">Basic Inputs</a></li>
-                                <li><a class="active" href="form-input-groups.html">Input Groups</a></li>
-                                <li><a href="form-horizontal.html">Horizontal Form</a></li>
-                                <li><a href="form-vertical.html">Vertical Form</a></li>
-                            </ul>
-                        </li>
-                        <li class="submenu">
-                            <a href="#"><i class="fa fa-table"></i> <span> Tables</span> <span class="menu-arrow"></span></a>
-                            <ul style="display: none;">
-                                <li><a href="tables-basic.html">Basic Tables</a></li>
-                                <li><a href="tables-datatables.html">Data Table</a></li>
-                            </ul>
-                        </li>
+
                         <li>
-                            <a href="calendar.html"><i class="fa fa-calendar"></i> <span>Calendar</span></a>
+                            <a href="assets.html">
+                                <i class="fa fa-picture-o"></i>
+                                <span>Media Library</span>
+                            </a>
                         </li>
-                        <li class="menu-title">Extras</li>
-                        <li class="submenu">
-                            <a href="#"><i class="fa fa-columns"></i> <span>Pages</span> <span class="menu-arrow"></span></a>
-                            <ul style="display: none;">
-                                <li><a href="login.html"> Login </a></li>
-                                <li><a href="register.html"> Register </a></li>
-                                <li><a href="forgot-password.html"> Forgot Password </a></li>
-                                <li><a href="change-password2.html"> Change Password </a></li>
-                                <li><a href="lock-screen.html"> Lock Screen </a></li>
-                                <li><a href="profile.html"> Profile </a></li>
-                                <li><a href="gallery.html"> Gallery </a></li>
-                                <li><a href="error-404.html">404 Error </a></li>
-                                <li><a href="error-500.html">500 Error </a></li>
-                                <li><a href="blank-page.html"> Blank Page </a></li>
-                            </ul>
+
+                        <li>
+                            <a href="settings.html">
+                                <i class="fa fa-cog"></i>
+                                <span>Settings</span>
+                            </a>
                         </li>
-                        <li class="submenu">
-                            <a href="javascript:void(0);"><i class="fa fa-share-alt"></i> <span>Multi Level</span> <span class="menu-arrow"></span></a>
-                            <ul style="display: none;">
-                                <li class="submenu">
-                                    <a href="javascript:void(0);"><span>Level 1</span> <span class="menu-arrow"></span></a>
-                                    <ul style="display: none;">
-                                        <li><a href="javascript:void(0);"><span>Level 2</span></a></li>
-                                        <li class="submenu">
-                                            <a href="javascript:void(0);"> <span> Level 2</span> <span class="menu-arrow"></span></a>
-                                            <ul style="display: none;">
-                                                <li><a href="javascript:void(0);">Level 3</a></li>
-                                                <li><a href="javascript:void(0);">Level 3</a></li>
-                                            </ul>
-                                        </li>
-                                        <li><a href="javascript:void(0);"><span>Level 2</span></a></li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <a href="javascript:void(0);"><span>Level 1</span></a>
-                                </li>
-                            </ul>
+
+                        <li>
+                            <a href="logout.html">
+                                <i class="fa fa-sign-out"></i>
+                                <span>Logout</span>
+                            </a>
                         </li>
                     </ul>
                 </div>
@@ -292,230 +237,290 @@
         </div>
         <div class="page-wrapper">
             <div class="content">
+
+                <!-- Page Header -->
                 <div class="row">
-                    <div class="col-sm-12">
-                        <h4 class="page-title">Input Groups</h4>
+                    <div class="col-sm-8 col-4">
+                        <h4 class="page-title">Add Service</h4>
+                    </div>
+                    <div class="col-sm-4 col-8 text-right m-b-30">
+                        <a href="services.html" class="btn btn-primary btn-rounded float-right">
+                            <i class="fa fa-arrow-left"></i> Back to Services
+                        </a>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="card-box">
-                            <h4 class="card-title">Basic Examples</h4>
-                            <form action="#">
-                                <div class="form-group row">
-                                    <label class="col-form-label col-lg-2">Group Left</label>
-                                    <div class="col-md-10">
-										<div class="input-group mb-3">
-											<div class="input-group-prepend">
-												<span class="input-group-text" id="basic-addon1">@</span>
-											</div>
-											<input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
-										</div>
-                                    </div>
-                                </div>
-                                <div class="form-group row">
-                                    <label class="col-form-label col-lg-2">Group Right</label>
-                                    <div class="col-md-10">
-										<div class="input-group mb-3">
-											<input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">
-											<div class="input-group-append">
-												<span class="input-group-text" id="basic-addon2">@example.com</span>
-											</div>
-										</div>
-                                    </div>
-                                </div>
-                                <div class="form-group row">
-                                    <label class="col-form-label col-lg-2">URL Example</label>
-                                    <div class="col-md-10">
-                                        <div class="input-group">
-											<div class="input-group-prepend">
-												<span class="input-group-text">https://</span>
-											</div>
-                                            <input type="text" class="form-control">
-                                        </div>
+                
+                <form action="" method="POST" enctype="multipart/form-data">
+
+                    <!-- Service Information -->
+                    <div class="card shadow">
+                        <div class="card-header">
+                            <h4 class="card-title">Service Information</h4>
+                        </div>
+
+                        <div class="card-body">
+                            <div class="row">
+
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>Service Name *</label>
+                                        <input type="text"
+                                            name="service_name"
+                                            class="form-control"
+                                            placeholder="Software Development"
+                                            required>
                                     </div>
                                 </div>
 
-                                <div class="form-group row">
-                                    <label class="col-form-label col-lg-2">Group with Price</label>
-                                    <div class="col-md-10">
-                                        <div class="input-group">
-											<div class="input-group-prepend">
-												<span class="input-group-text">$</span>
-											</div>
-                                            <input type="text" class="form-control">
-											<div class="input-group-append">
-												<span class="input-group-text">.00</span>
-											</div>
-                                        </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>Font Awesome Icon *</label>
+                                        <input type="text"
+                                            name="service_icon"
+                                            class="form-control"
+                                            placeholder="fa fa-code"
+                                            required>
                                     </div>
                                 </div>
 
-                                <div class="form-group row">
-                                    <label class="col-form-label col-lg-2">Group with Price (Left)</label>
-                                    <div class="col-md-10">
-                                        <div class="input-group">
-											<div class="input-group-prepend">
-												<span class="input-group-text">$</span>
-											</div>
-											<div class="input-group-prepend">
-												<span class="input-group-text">0.00</span>
-											</div>
-                                            <input type="text" class="form-control">
-                                        </div>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                        <div class="card-box">
-                            <h4 class="card-title">Sizing</h4>
-                            <form action="#">
-                                <div class="form-group row">
-                                    <label class="col-form-label col-lg-2">Input Group Large</label>
-                                    <div class="col-md-10">
-                                        <div class="input-group input-group-lg">
-											<div class="input-group-prepend">
-												<span class="input-group-text" id="sizing-addon1">@</span>
-											</div>
-                                            <input type="text" class="form-control" placeholder="Username" aria-describedby="sizing-addon1">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="form-group row">
-                                    <label class="col-form-label col-lg-2">Input Group Default</label>
-                                    <div class="col-md-10">
-                                        <div class="input-group">
-											<div class="input-group-prepend">
-												<span class="input-group-text" id="sizing-addon2">@</span>
-											</div>
-                                            <input type="text" class="form-control" placeholder="Username" aria-describedby="sizing-addon2">
-                                        </div>
-                                    </div>
-                                </div>
-								<div class="form-group row">
-                                    <label class="col-form-label col-lg-2">Input Group Small</label>
-                                    <div class="col-md-10">
-                                        <div class="input-group input-group-sm">
-											<div class="input-group-prepend">
-												<span class="input-group-text" id="sizing-addon3">@</span>
-											</div>
-                                            <input type="text" class="form-control" placeholder="Username" aria-describedby="sizing-addon3">
-                                        </div>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                        <div class="card-box">
-                            <h4 class="card-title">Checkbox and Radio Addons</h4>
-                            <form action="#">
-                                <div class="form-group row">
-                                    <label class="col-form-label col-lg-2">Checkbox</label>
-                                    <div class="col-md-10">
-                                        <div class="input-group">
-											<div class="input-group-prepend">
-												<span class="input-group-text">
-													<input type="checkbox">
-												</span>
-											</div>
-                                            <input type="text" class="form-control">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="form-group row">
-                                    <label class="col-form-label col-lg-2">Radio</label>
-                                    <div class="col-md-10">
-                                        <div class="input-group">
-											<div class="input-group-prepend">
-												<span class="input-group-text">
-													<input type="radio">
-												</span>
-											</div>
-                                            <input type="text" class="form-control">
-                                        </div>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                        <div class="card-box">
-                            <h4 class="card-title">Multiple addons</h4>
-                            <form action="#">
-                                <div class="form-group row">
-                                    <label class="col-form-label col-lg-2">Radio and Text addons</label>
-                                    <div class="col-md-10">
-                                        <div class="input-group">
-											<div class="input-group-prepend">
-												<span class="input-group-text">
-													<input type="checkbox">
-												</span>
-											</div>
-											<div class="input-group-prepend">
-												<span class="input-group-text">$</span>
-											</div>
-                                            <input type="text" class="form-control">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="form-group row">
-                                    <label class="col-form-label col-lg-2">Two addons</label>
-                                    <div class="col-md-10">
-                                        <div class="input-group">
-											<div class="input-group-prepend">
-												<span class="input-group-text">$</span>
-											</div>
-											<div class="input-group-prepend">
-												<span class="input-group-text">0.00</span>
-											</div>
-                                            <input type="text" class="form-control">
-                                        </div>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                        <div class="card-box">
-                            <h4 class="card-title">Buttons with dropdowns</h4>
-                            <form action="#">
-                                <div class="form-group row">
-                                    <label class="col-form-label col-lg-2">Radio and Text addons</label>
-                                    <div class="col-md-10">
-                                        <div class="input-group">
-											<div class="input-group-prepend">
-												<button type="button" class="btn btn-white dropdown-toggle" data-toggle="dropdown">Action</button>
-												<div class="dropdown-menu">
-													<a class="dropdown-item" href="#">Action</a>
-													<a class="dropdown-item" href="#">Another action</a>
-													<a class="dropdown-item" href="#">Something else here</a>
-													<div role="separator" class="dropdown-divider"></div>
-													<a class="dropdown-item" href="#">Separated link</a>
-												</div>
-                                            </div>
-                                            <input type="text" class="form-control" placeholder="Left dropdown">
-                                        </div>
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label>Short Description *</label>
+                                        <textarea class="form-control"
+                                                rows="3"
+                                                name="short_description"
+                                                placeholder="Displayed on service cards"
+                                                required></textarea>
                                     </div>
                                 </div>
 
-                                <div class="form-group row">
-                                    <label class="col-form-label col-lg-2">Two addons</label>
-                                    <div class="col-md-10">
-                                        <div class="input-group">
-                                            <input type="text" class="form-control" placeholder="Right dropdown">
-                                            <div class="input-group-append">
-                                                <button type="button" class="btn btn-white dropdown-toggle" data-toggle="dropdown">Action</button>
-                                                <div class="dropdown-menu dropdown-menu-right">
-													<a class="dropdown-item" href="#">Action</a>
-													<a class="dropdown-item" href="#">Another action</a>
-													<a class="dropdown-item" href="#">Something else here</a>
-													<div role="separator" class="dropdown-divider"></div>
-													<a class="dropdown-item" href="#">Separated link</a>
-												</div>
-                                            </div>
-                                        </div>
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label>Full Description *</label>
+                                        <textarea class="form-control"
+                                                rows="8"
+                                                name="full_description"
+                                                placeholder="Detailed service description"
+                                                required></textarea>
                                     </div>
                                 </div>
-                            </form>
+
+                            </div>
                         </div>
                     </div>
-                </div>
+
+                    <!-- Service Media -->
+                    <div class="card shadow mt-4">
+                        <div class="card-header">
+                            <h4 class="card-title">Service Media</h4>
+                        </div>
+
+                        <div class="card-body">
+                            <div class="row">
+
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>Service Image</label>
+                                        <input type="file"
+                                            name="service_image"
+                                            class="form-control">
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>Banner Image</label>
+                                        <input type="file"
+                                            name="banner_image"
+                                            class="form-control">
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Service Settings -->
+                    <div class="card shadow mt-4">
+                        <div class="card-header">
+                            <h4 class="card-title">Service Settings</h4>
+                        </div>
+
+                        <div class="card-body">
+                            <div class="row">
+
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label>Page URL *</label>
+                                        <input type="text"
+                                            name="service_url"
+                                            class="form-control"
+                                            placeholder="software-development">
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label>Display Order</label>
+                                        <input type="number"
+                                            name="display_order"
+                                            class="form-control"
+                                            value="1">
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label>Status</label>
+                                        <select name="status" class="form-control">
+                                            <option value="Active">Active</option>
+                                            <option value="Inactive">Inactive</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label>Featured Service</label>
+                                        <select name="featured" class="form-control">
+                                            <option value="0">No</option>
+                                            <option value="1">Yes</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Service Features -->
+                    <div class="card shadow mt-4">
+                        <div class="card-header">
+                            <h4 class="card-title">Service Features</h4>
+                        </div>
+
+                        <div class="card-body">
+                            <div class="row">
+
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>Feature 1</label>
+                                        <input type="text"
+                                            name="feature1"
+                                            class="form-control"
+                                            placeholder="Custom Software Development">
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>Feature 2</label>
+                                        <input type="text"
+                                            name="feature2"
+                                            class="form-control"
+                                            placeholder="API Integration">
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>Feature 3</label>
+                                        <input type="text"
+                                            name="feature3"
+                                            class="form-control"
+                                            placeholder="Database Design">
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>Feature 4</label>
+                                        <input type="text"
+                                            name="feature4"
+                                            class="form-control"
+                                            placeholder="System Maintenance">
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Technologies -->
+                    <div class="card shadow mt-4">
+                        <div class="card-header">
+                            <h4 class="card-title">Technologies Used</h4>
+                        </div>
+
+                        <div class="card-body">
+                            <div class="form-group">
+                                <label>Technologies</label>
+                                <textarea class="form-control"
+                                        rows="4"
+                                        name="technologies"
+                                        placeholder="PHP, Laravel, MySQL, JavaScript, React, Flutter"></textarea>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- SEO Settings -->
+                    <div class="card shadow mt-4">
+                        <div class="card-header">
+                            <h4 class="card-title">SEO Settings</h4>
+                        </div>
+
+                        <div class="card-body">
+                            <div class="row">
+
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label>Meta Title</label>
+                                        <input type="text"
+                                            name="meta_title"
+                                            class="form-control">
+                                    </div>
+                                </div>
+
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label>Meta Description</label>
+                                        <textarea class="form-control"
+                                                rows="4"
+                                                name="meta_description"></textarea>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label>Keywords</label>
+                                        <input type="text"
+                                            name="keywords"
+                                            class="form-control"
+                                            placeholder="software development, web development, cybersecurity">
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Submit Buttons -->
+                    <div class="text-right mt-4 mb-5">
+
+                        <button type="reset" class="btn btn-secondary">
+                            <i class="fa fa-refresh"></i> Reset
+                        </button>
+
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fa fa-save"></i> Save Service
+                        </button>
+
+                    </div>
+
+                </form>
+
             </div>
+
             <div class="notification-box">
                 <div class="msg-sidebar notifications msg-noti">
                     <div class="topnav-dropdown-header">
@@ -726,15 +731,17 @@
                 </div>
             </div>
         </div>
-    </div>
+
+
+
     <div class="sidebar-overlay" data-reff=""></div>
     <script src="assets/js/jquery-3.2.1.min.js"></script>
 	<script src="assets/js/popper.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
     <script src="assets/js/jquery.slimscroll.js"></script>
+    <script src="assets/js/Chart.bundle.js"></script>
+    <script src="assets/js/chart.js"></script>
     <script src="assets/js/app.js"></script>
+
 </body>
 
-
-<!-- form-input-groups23:59-->
-</html>

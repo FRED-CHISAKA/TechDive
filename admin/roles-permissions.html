@@ -1,21 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 
-
-<!-- roles-permissions24:05-->
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
-    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
-    <title>TechDive - Medical & Hospital - Bootstrap 4 Admin Template</title>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/icon.jpg">
+    <title>TechDive Admin Dashboard</title>
     <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.min.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-    <!--[if lt IE 9]>
-		<script src="assets/js/html5shiv.min.js"></script>
-		<script src="assets/js/respond.min.js"></script>
-	<![endif]-->
+    <link rel="stylesheet" type="text/css" href="assets/css/custom-css.css">
 </head>
 
 <body>
@@ -23,7 +19,7 @@
         <div class="header">
 			<div class="header-left">
 				<a href="index.html" class="logo">
-					<img src="assets/img/logo.png" width="35" height="35" alt="">
+					<img src="assets/img/icon.jpg" width="35" height="35" alt="" style="border-radius: 50% !important;"><span>TechDive</span>
 				</a>
 			</div>
 			<a id="toggle_btn" href="javascript:void(0);"><i class="fa fa-bars"></i></a>
@@ -108,7 +104,7 @@
                     <a href="#" class="dropdown-toggle nav-link user-link" data-toggle="dropdown">
                         <span class="user-img"><img class="rounded-circle" src="assets/img/user.jpg" width="40" alt="Admin">
 							<span class="status online"></span></span>
-                        <span>Admin</span>
+                        <span>TechDive Admin</span>
                     </a>
 					<div class="dropdown-menu">
 						<a class="dropdown-item" href="profile.html">My Profile</a>
@@ -184,23 +180,26 @@
                             <ul>
                                 <li class="active">
                                     <a href="javascript:void(0);">Administrator</a>
-									<span class="role-action">
-										<a href="edit-role.html">
-											<span class="action-circle large">
-												<i class="material-icons">edit</i>
-											</span>
-										</a>
-										<a href="#" data-toggle="modal" data-target="#delete_role">
-											<span class="action-circle large delete-btn">
-												<i class="material-icons">delete</i>
-											</span>
-										</a>
-									</span>
+									<div class="dropdown profile-action">
+                                        <a href="#" class="action-icon dropdown-toggle" data-toggle="dropdown">
+                                            <i class="fa fa-ellipsis-v"></i>
+                                        </a>
+
+                                        <div class="dropdown-menu dropdown-menu-right">
+                                            <a class="dropdown-item" href="#">
+                                                <i class="fa fa-pencil m-r-5"></i> Edit
+                                            </a>
+
+                                            <a class="dropdown-item" href="#">
+                                                <i class="fa fa-trash-o m-r-5"></i> Delete
+                                            </a>
+                                        </div>
+                                    </div>
                                 </li>
-                                <li><a href="#">Doctor</a></li>
-                                <li><a href="#">Nurse</a></li>
-                                <li><a href="#">Laboratorist</a></li>
-                                <li><a href="#">Pharmacist</a></li>
+                                <li><a href="#">Chief Technology Officer</a></li>
+                                <li><a href="#">Risk Manager</a></li>
+                                <li><a href="#">Team Leader</a></li>
+                                <li><a href="#">Project Manager</a></li>
                                 <li><a href="#">Accountant</a></li>
                                 <li><a href="#">Receptionist</a></li>
                             </ul>

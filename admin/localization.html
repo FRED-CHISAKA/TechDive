@@ -1,21 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 
-
-<!-- localization24:04-->
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
-    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
-    <title>TechDive - Medical & Hospital - Bootstrap 4 Admin Template</title>
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/icon.jpg">
+    <title>TechDive Admin Dashboard</title>
     <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="assets/css/select2.min.css">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-    <!--[if lt IE 9]>
-		<script src="assets/js/html5shiv.min.js"></script>
-		<script src="assets/js/respond.min.js"></script>
-	<![endif]-->
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/custom-css.css">
+
 </head>
 
 <body>
@@ -23,7 +22,7 @@
         <div class="header">
 			<div class="header-left">
 				<a href="index.html" class="logo">
-					<img src="assets/img/logo.png" width="35" height="35" alt="">
+					<img src="assets/img/icon.jpg" width="35" height="35" alt="" style="border-radius: 50% !important;"><span>TechDive</span>
 				</a>
 			</div>
 			<a id="toggle_btn" href="javascript:void(0);"><i class="fa fa-bars"></i></a>
@@ -108,7 +107,7 @@
                     <a href="#" class="dropdown-toggle nav-link user-link" data-toggle="dropdown">
                         <span class="user-img"><img class="rounded-circle" src="assets/img/user.jpg" width="40" alt="Admin">
 							<span class="status online"></span></span>
-                        <span>Admin</span>
+                        <span>TechDive Admin</span>
                     </a>
 					<div class="dropdown-menu">
 						<a class="dropdown-item" href="profile.html">My Profile</a>
@@ -181,8 +180,8 @@
                                     <div class="form-group">
                                         <label>Default Country</label>
                                         <select class="select">
-                                            <option selected="selected">USA</option>
-                                            <option>United Kingdom</option>
+                                            <option selected="selected">Kenya</option>
+                                            <option>USA</option>
                                         </select>
                                     </div>
                                 </div>
@@ -190,14 +189,14 @@
                                     <div class="form-group">
                                         <label>Date Format</label>
                                         <select class="select">
-                                            <option value="d/m/Y">15/05/2016</option>
-                                            <option value="d.m.Y">15.05.2016</option>
-                                            <option value="d-m-Y">15-05-2016</option>
-                                            <option value="m/d/Y">05/15/2016</option>
-                                            <option value="Y/m/d">2016/05/15</option>
-                                            <option value="Y-m-d">2016-05-15</option>
-                                            <option value="M d Y">May 15 2016</option>
-                                            <option selected="selected" value="d M Y">15 May 2016</option>
+                                            <option value="d/m/Y">15/05/2026</option>
+                                            <option value="d.m.Y">15.05.2026</option>
+                                            <option value="d-m-Y">15-05-2026</option>
+                                            <option value="m/d/Y">05/15/2026</option>
+                                            <option value="Y/m/d">2026/05/15</option>
+                                            <option value="Y-m-d">2026-05-15</option>
+                                            <option value="M d Y">May 15 2026</option>
+                                            <option selected="selected" value="d M Y">15 May 2026</option>
                                         </select>
                                     </div>
                                 </div>
@@ -205,7 +204,7 @@
                                     <div class="form-group">
                                         <label>Timezone</label>
                                         <select class="select">
-                                            <option>(UTC +5:30) Antarctica/Palmer</option>
+                                            <option>(EAT +3:00) East African Time</option>
                                         </select>
                                     </div>
                                 </div>
@@ -213,8 +212,8 @@
                                     <div class="form-group">
                                         <label>Default Language</label>
                                         <select class="select">
-                                            <option>English</option>
-                                            <option selected="selected">French</option>
+                                            <option selected="selected">English</option>
+                                            <option>French</option>
                                         </select>
                                     </div>
                                 </div>
@@ -222,17 +221,17 @@
                                     <div class="form-group">
                                         <label>Currency Code</label>
                                         <select class="select">
-                                            <option selected="selected">USD</option>
-                                            <option>Pound</option>
+                                            <option selected="selected">KSH</option>
+                                            <option>USD</option>
                                             <option>EURO</option>
-                                            <option>Ringgit</option>
+                                            <option>POUND</option>
                                         </select>
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
                                     <div class="form-group">
                                         <label>Currency Symbol</label>
-                                        <input class="form-control" readonly value="$" type="text">
+                                        <input class="form-control" readonly value="Ksh." type="text">
                                     </div>
                                 </div>
 								<div class="col-sm-12 text-center m-t-20">
@@ -463,6 +462,4 @@
     <script src="assets/js/app.js"></script>
 </body>
 
-
-<!-- localization24:04-->
 </html>
